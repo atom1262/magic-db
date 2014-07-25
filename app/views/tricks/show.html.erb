@@ -10,6 +10,8 @@
   </p>
 </div>
 
-<%= embed(@trick.youtube_url) %>
+<div class="embed-container">
+  <%= embed(@trick.youtube_url) %>
+</div>
 
 <%= button_to "Home", root_path, method: :get %>
