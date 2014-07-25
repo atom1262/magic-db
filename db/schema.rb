@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140704232658) do
+ActiveRecord::Schema.define(version: 20140725021627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140704232658) do
   create_table "tricks", force: true do |t|
     t.string   "name",                        null: false
     t.text     "description",                 null: false
-    t.string   "url",                         null: false
+    t.string   "youtube_url",                 null: false
     t.integer  "upvotes_count",   default: 0
     t.integer  "downvotes_count", default: 0
     t.integer  "user_id",                     null: false
