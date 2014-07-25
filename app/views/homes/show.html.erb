@@ -6,8 +6,19 @@
   The most comprehensive magic trick database in the world. For magicians, by magicians.
 </div>
 
-<p>
-  <div id="add-trick-button">
-    <%= button_to "Add Trick", new_trick_path, method: :get %>
-  </div>
-</p>
+<% if signed_in? %>
+  <p>
+    <div id="add-trick-button">
+      <%= button_to "Add Trick", new_trick_path, method: :get %>
+    </div>
+  </p>
+<% end %>
+
+<div id="recent-tricks">
+  <h3>Recently Added Tricks</h3>
+  <ul>
+    <% @tricks.each do |trick| %>
+      <li><%= link_to trick.name, trick %> submitted by: <%= trick.author %> <%= time_ago_in_words(trick.created_at) %> ago</li>
+    <% end %>
+  </ul>
+</div>

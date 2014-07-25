@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
 include Clearance::User
+has_many :tricks
 
-  include Clearance::User
 end
