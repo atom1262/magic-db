@@ -22,3 +22,12 @@
     <% end %>
   </ul>
 </div>
+
+<div id="recent-posts">
+  <h3>Magic News</h3>
+  <ul>
+    <% @posts.each do |post| %>
+      <li><%= link_to post.name, post %> submitted by: <%= post.author %> <%= time_ago_in_words(post.created_at) %> ago</li>
+    <% end %>
+  </ul>
+</div>
