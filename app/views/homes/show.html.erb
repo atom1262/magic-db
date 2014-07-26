@@ -1,20 +1,25 @@
-<div id="homepage-title">
+<div class="homepage-title">
   <h1>Welcome to MagicDB</h1>
 </div>
 
-<div id="homepage-description">
+<div class="homepage-description">
   The most comprehensive magic trick database in the world. For magicians, by magicians.
 </div>
 
 <% if signed_in? %>
-  <p>
-    <div id="add-trick-button">
-      <%= button_to "Add Trick", new_trick_path, method: :get %>
-    </div>
-  </p>
+    <p>
+      <div class="add-trick-button">
+        <%= button_to "Add Trick", new_trick_path, method: :get %>
+      </div>
+  <% if signed_in? %>
+      <div class="add-post-button">
+        <%= button_to "Make Post", new_post_path, method: :get %>
+      </div>
+    </p>
+  <% end %>
 <% end %>
 
-<div id="recent-tricks">
+<div class="recent-tricks">
   <h3>Recently Added Tricks</h3>
   <ul>
     <% @tricks.each do |trick| %>
@@ -23,11 +28,11 @@
   </ul>
 </div>
 
-<div id="recent-posts">
+<div class="recent-posts">
   <h3>Magic News</h3>
   <ul>
     <% @posts.each do |post| %>
-      <li><%= link_to post.name, post %> submitted by: <%= post.author %> <%= time_ago_in_words(post.created_at) %> ago</li>
+      <li><%= link_to post.title, post %> submitted by: <%= post.user.email %> <%= time_ago_in_words(post.created_at) %> ago</li>
     <% end %>
   </ul>
 </div>

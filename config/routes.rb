@@ -4,6 +4,7 @@ MagicDb::Application.routes.draw do
 
   resources :users, only: [:show]
   resources :tricks, only: [:new, :create, :show]
+  resources :posts, only: [:new, :create, :show]
 
 
 end
