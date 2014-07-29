@@ -1,0 +1,19 @@
+<h1>Edit Post</h1>
+
+<div class="edit-post-form">
+  <%= form_for @post do |form| %>
+
+    <p>
+      <%= form.text_field :title, placeholder: 'Post Headline' %>
+    </p>
+
+    <p>
+      <%= form.text_area :body, placeholder: 'Post Body' %>
+    </p>
+
+    <p>
+      <%= form.submit "Update Post" %>
+    </p>
+
+  <% end %>
+</div>
