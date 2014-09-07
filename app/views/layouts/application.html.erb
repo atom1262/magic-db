@@ -8,21 +8,14 @@
 </head>
 <body>
 
-<div class="navigation">
-  <div class="container">
-    <ul>
-      <li><%= render "partials/signin" %>
-      <li></li>
-      <li></li>
-  </div>
-</div>
+  <%= render "partials/nav" %>
 
     <div id="flash">
       <% flash.each do |key, value| %>
         <div id="flash_<%= key %>"><%=h value %></div>
       <% end %>
+        </div>
     </div>
-  </div>
 
 <%= yield %>
 
