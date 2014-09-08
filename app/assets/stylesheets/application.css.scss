@@ -1,14 +1,7 @@
-@import "bourbon";
-@import "neat";
-@import "navigation";
-
-
 .homepage-title {
-font-family: $helvetica;
 }
 
 .recent-posts {
-  @include span-columns(6);
 }
 
 .embed-container {
