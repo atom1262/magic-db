@@ -1,8 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
 .nav {
   .container {
     margin: 0 auto;
     border-bottom: 5px solid black;
     padding: 10px 0px;
+  }
+
+  .logo {
+    display: inline;
+    padding-left: 100px;
   }
 
   a {
@@ -15,6 +22,14 @@
 
   li {
     display: inline;
+  }
+
+  .title {
+    display: inline;
+    font-family: lobster;
+    font-size: 25px;
+    padding-left: 50px;
+    padding-top: 10px;
   }
 
   .navbar-right {
