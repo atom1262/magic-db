@@ -1,16 +1,16 @@
 .jumbotron {
-  height: 500px;
+  height: 225px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .jumbotron .container {
   position: relative;
-  top: 100px;
+  top: 25px;
 }
 
 .jumbotron h1 {
-  color: #fff;
+  color: #000000;
   font-size: 48px;
   font-family: 'Shift', sans-serif;
   font-weight: bold;
@@ -18,5 +18,5 @@
 
 .jumbotron p {
   font-size: 20px;
-  color: #fff;
+  color: #000000;
 }

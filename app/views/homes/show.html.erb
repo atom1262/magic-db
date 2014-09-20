@@ -1,7 +1,6 @@
 <%= render 'partials/jumbotron' %>
 
 <% if signed_in? %>
-    <p>
       <div class="add-trick-button">
         <%= button_to "Add Trick", new_trick_path, method: :get %>
       </div>
@@ -9,24 +8,31 @@
       <div class="add-post-button">
         <%= button_to "Make Post", new_post_path, method: :get %>
       </div>
-    </p>
   <% end %>
 <% end %>
 
 <div class="recent-tricks">
-  <h3>Recently Added Tricks</h3>
-  <ul>
-    <% @tricks.each do |trick| %>
-      <li><%= link_to trick.name, trick %> submitted by: <%= trick.author %> <%= time_ago_in_words(trick.created_at) %> ago</li>
-    <% end %>
-  </ul>
+  <div class="col-md-6">
+    <div class="row">
+      <h3>Recently Added Tricks</h3>
+      <ul>
+        <% @tricks.each do |trick| %>
+          <li><%= link_to trick.name, trick %> submitted by: <%= trick.author %> <%= time_ago_in_words(trick.created_at) %> ago</li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <div class="recent-posts">
-  <h3>Magic News</h3>
-  <ul>
-    <% @posts.each do |post| %>
-      <li><%= link_to post.title, post %> submitted by: <%= post.author %> <%= time_ago_in_words(post.created_at) %> ago</li>
-    <% end %>
-  </ul>
+  <div class="col-md-6">
+    <div class="row">
+      <h3>Magic News</h3>
+      <ul>
+        <% @posts.each do |post| %>
+          <li><%= link_to post.title, post %> submitted by: <%= post.author %> <%= time_ago_in_words(post.created_at) %> ago</li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
