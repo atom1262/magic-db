@@ -1,0 +1,12 @@
+<div class="recent-posts">
+  <div class="col-md-6">
+    <div class="row">
+      <h3>Magic News</h3>
+      <ul>
+        <% @posts.each do |post| %>
+          <li><%= link_to post.title, post %> submitted by: <%= post.author %> <%= time_ago_in_words(post.created_at) %> ago</li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
