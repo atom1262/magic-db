@@ -1,12 +1,1 @@
 <%= render 'partials/jumbotron' %>
-
-<% if signed_in? %>
-      <div class="add-trick-button">
-        <%= button_to "Add Trick", new_trick_path, method: :get %>
-      </div>
-  <% if current_user.admin? %>
-      <div class="add-post-button">
-        <%= button_to "Make Post", new_post_path, method: :get %>
-      </div>
-  <% end %>
-<% end %>

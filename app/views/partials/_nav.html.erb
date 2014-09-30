@@ -4,13 +4,38 @@
     <ul class="navbar-left nav nav-pills">
       <li class="active"><%= link_to "Home", root_path %></li>
       <li><a href="#">About</a></li>
-      <li><a href="#">Tricks</a></li>
-      <li><a href="#">Posts</a></li>
+      <li>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Tricks
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" <%= link_to "All Tricks", tricks_path %></li>
+            <% if signed_in? %>
+              <li role="presentation"><a role="menuitem" tabindex="-1" <%= link_to "Add Trick", new_trick_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Posts
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" <%= link_to "All Posts", posts_path %></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" <%= link_to "Make Post", new_post_path %></li>
+          </ul>
+        </div>
+      </li>
     </ul>
+
 
     <div class="logo"><img src="assets/top_hat_mustache.png" alt="Top Hat Logo" height="45" width="45"></div>
 
-    <div class="title">MagicDB</div>
+    <div class="title">The MagicDB</div>
 
     <ul class="navbar-right">
       <%= render 'partials/signin' %>
