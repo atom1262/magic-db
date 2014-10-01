@@ -1,0 +1,7 @@
+<h1>All Tricks</h1>
+
+<% @tricks.each do |trick| %>
+  <ol>
+    <ul><%= link_to trick.name, trick %></ul>
+  </ol>
+<% end %>
