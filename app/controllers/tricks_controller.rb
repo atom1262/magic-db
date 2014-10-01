@@ -16,7 +16,7 @@ class TricksController < ApplicationController
   private
 
   def trick_params
-    params.require(:trick).permit(:name, :description, :youtube_url)
+    params.require(:trick).permit(:name, :description, :youtube_url, :purpose)
   end
 
 end
