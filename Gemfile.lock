@@ -32,7 +32,10 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bitter (0.0.1)
+    bitters (0.10.1)
+      bourbon (>= 3.2)
+      sass (>= 3.2)
+      thor
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -130,7 +133,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  bitter
+  bitters
   bourbon
   clearance
   coffee-rails (~> 4.0.0)

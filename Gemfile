@@ -11,7 +11,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'clearance'
 gem 'bourbon'
 gem 'neat'
-gem 'bitter'
+gem 'bitters'
 
 group :doc do
   gem 'sdoc', require: false
