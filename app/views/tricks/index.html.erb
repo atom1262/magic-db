@@ -1,7 +1,7 @@
 <h1>All Tricks</h1>
 
 <% @tricks.each do |trick| %>
-  <ul id="sortable">
-    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><%= link_to trick.name, trick %></li>
+  <ul>
+    <li><%= link_to trick.name, trick %></li>
   </ul>
 <% end %>
