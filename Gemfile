@@ -12,6 +12,7 @@ gem 'clearance'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'acts_as_list'
+gem 'youtube_addy'
 
 group :doc do
   gem 'sdoc', require: false
