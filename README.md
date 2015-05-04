@@ -1,6 +1,8 @@
 Magic DB
 ========
 
+![Dashboard](/Desktop/Screenshots/MagicDB_Dash.png "Landing Page")
+
 Phase 1: A community site for amateur magicians to create profiles to upload, discover, and
 rate tricks. There are video tutorials of magic tricks numbering into the
 thousands; Magic DB is a community-driven collection of these. Users can tag
