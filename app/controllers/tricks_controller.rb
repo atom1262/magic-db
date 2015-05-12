@@ -1,8 +1,6 @@
 class TricksController < ApplicationController
-
-  def index
-    @tricks = Trick.all
-  end
+  before_action :all_tricks, only: [:index, :create]
+  respond_to :html, :js
 
   def show
     @trick = Trick.find(params[:id])
@@ -18,6 +16,10 @@ class TricksController < ApplicationController
   end
 
   private
+
+  def all_tricks
+    @tricks = Trick.all
+  end
 
   def trick_params
     params.require(:trick).permit(:name, :description, :youtube_url, :purpose)

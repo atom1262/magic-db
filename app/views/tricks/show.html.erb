@@ -5,8 +5,9 @@
 </div>
 
 <div class="trick-description">
-  <p>
-    <h3><strong>Description: </strong><%= @trick.description %></h3>
+  <div class="description-toggle btn btn-primary"><strong>Description</strong></div><<%= @trick.description %>
+  <p class="description-body" style="display: none;">
+    <%= @trick.description %>
   </p>
 </div>
 

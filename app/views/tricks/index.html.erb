@@ -1,5 +1,12 @@
 <h1>All Tricks</h1>
 
+<div>
+  <%= button_to 'Add Trick', method: :get, remote: true %>
+</div>
+
+<div id="trick-form" style="display: none;">
+</div>
+
 <% @tricks.each do |trick| %>
   <ul>
     <li><%= link_to trick.name, trick %></li>
