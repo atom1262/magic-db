@@ -4,6 +4,8 @@ class TricksController < ApplicationController
 
   def show
     @trick = Trick.find(params[:id])
+    @tag = Tag.new
+    @tags = @trick.tags.all
   end
 
   def new
