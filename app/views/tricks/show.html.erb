@@ -4,19 +4,7 @@
   </p>
 </div>
 
-<div class="trick-tags">
-  <% @tags.each do |tag| %>
-    <%= tag.keywords %>
-  <% end %>
-</div>
-
 <% if signed_in? %>
-  <div class="tags-form">
-    <%= form_for ([@trick, @tag]) do |f| %>
-      <%= f.text_field :keywords, placeholder: "Enter, tags, like, this" %>
-      <%= f.submit "Add Tag" %>
-    <% end %>
-  </div>
 <% end %>
 
 <div class="trick-description">
