@@ -22,7 +22,7 @@ class TricksController < ApplicationController
   end
 
   def trick_params
-    params.require(:trick).permit(:name, :description, :youtube_url, :purpose)
+    params.require(:trick).permit(:name, :description, :youtube_url, :purpose, :tag_list)
   end
 
 end

@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'acts_as_list'
 gem 'youtube_addy'
+gem 'acts-as-taggable-on'
 
 group :doc do
   gem 'sdoc', require: false
